@@ -2,7 +2,7 @@
 /*
 Plugin Name: Edit Checkout Page
 Plugin URI: https://github.com/jannisbrandt/Modify-the-cart-details-o-WooCommerce-Checkout-Page
-description: Modify the cart details on WooCommerce checkout page
+description: Fügt in der Tabelle auf der Checkout-Seite von WooCommerce die Funktionalität des Ändern der Anzahl der Produkte hinzu.
 Version: 1.2
 Author: Jannis Brandt
 Author URI: https://jannisbrandt.de
@@ -26,7 +26,6 @@ add_filter ('woocommerce_checkout_cart_item_quantity', 'remove_quantity_text', 1
 /*
  * will add delete button, quanitity field on the checkout page table
  */
-
 
 function add_quantity( $product_title, $cart_item, $cart_item_key ) {
 
