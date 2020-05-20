@@ -126,7 +126,7 @@ function update_order_review()
 
 function add_css(){
     if (  is_checkout() ) {
-        wp_enqueue_style( 'checkout_style', plugins_url( 'assets/css/change-quantity-on-checkout.css', __FILE__ ), '', '', false );
+        wp_enqueue_style( 'checkout_style', plugins_url( 'assets/css/edit-checkout.css', __FILE__ ), '', '', false );
     }
 }
 
