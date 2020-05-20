@@ -82,3 +82,18 @@ function add_quantity( $product_title, $cart_item, $cart_item_key ) {
 }
 
 add_filter ('woocommerce_cart_item_name', 'add_quantity' , 10, 3 );
+
+
+/* Add Javascript at the Footer */
+
+function add_quanity_js(){
+    if ( is_checkout() ) {
+        wp_enqueue_script( 'checkout_script', plugins_url( '/assets/js/add_quantity.js', __FILE__ ), '', '', false );
+        $localize_script = array(
+            'ajax_url' => admin_url( 'admin-ajax.php' )
+        );
+        wp_localize_script( 'checkout_script', 'add_quantity', $localize_script );
+    }
+}
+
+add_action( 'wp_footer', 'add_quanity_js', 10 );
