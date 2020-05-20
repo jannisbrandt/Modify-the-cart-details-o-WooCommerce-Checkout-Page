@@ -88,7 +88,7 @@ add_filter ('woocommerce_cart_item_name', 'add_quantity' , 10, 3 );
 
 function add_quanity_js(){
     if ( is_checkout() ) {
-        wp_enqueue_script( 'checkout_script', plugins_url( '/assets/js/add_quantity.js', __FILE__ ), '', '', false );
+        wp_enqueue_script( 'checkout_script', plugins_url( 'assets/js/add_quantity.js', __FILE__ ), '', '', false );
         $localize_script = array(
             'ajax_url' => admin_url( 'admin-ajax.php' )
         );
@@ -126,7 +126,7 @@ function update_order_review()
 
 function add_css(){
     if (  is_checkout() ) {
-        wp_enqueue_style( 'checkout_style', plugins_url( '/assets/css/change-quantity-on-checkout.css', __FILE__ ), '', '', false );
+        wp_enqueue_style( 'checkout_style', plugins_url( 'assets/css/change-quantity-on-checkout.css', __FILE__ ), '', '', false );
     }
 }
 
