@@ -1,0 +1,18 @@
+#content table.shop_table a.remove {
+    color: red;
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    height: 20px;
+    line-height: 20px;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    width: 20px;
+    float: left;
+    border: 0;
+}
+.product_name{
+    float:left;
+}
