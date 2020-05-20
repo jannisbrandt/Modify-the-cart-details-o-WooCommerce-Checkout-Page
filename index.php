@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Edit Checkout Page
-Plugin URI: https://jannisbrandt.de
+Plugin URI: https://github.com/jannisbrandt/Modify-the-cart-details-o-WooCommerce-Checkout-Page
 description: Modify the cart details on WooCommerce checkout page
 Version: 1.2
 Author: Jannis Brandt
