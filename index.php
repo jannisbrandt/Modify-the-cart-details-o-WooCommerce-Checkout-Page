@@ -97,3 +97,29 @@ function add_quanity_js(){
 }
 
 add_action( 'wp_footer', 'add_quanity_js', 10 );
+
+
+function load_ajax()
+{
+    if (!is_user_logged_in()) {
+        add_action('wp_ajax_nopriv_update_order_review', 'update_order_review');
+    } else {
+        add_action('wp_ajax_update_order_review', 'update_order_review');
+    }
+}
+
+add_action('init', 'load_ajax');
+
+
+function update_order_review()
+{
+    $values = array();
+    parse_str($_POST['post_data'], $values);
+    $cart = $values['cart'];
+    foreach ($cart as $cart_key => $cart_value) {
+        WC()->cart->set_quantity($cart_key, $cart_value['qty'], false);
+        WC()->cart->calculate_totals();
+        woocommerce_cart_totals();
+    }
+    wp_die();
+}
