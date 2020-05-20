@@ -123,3 +123,10 @@ function update_order_review()
     }
     wp_die();
 }
+
+function add_css(){
+    if (  is_checkout() ) {
+        wp_enqueue_style( 'checkout_style', plugins_url( '/assets/css/edit-checkout.css', __FILE__ ), '', '', false );
+    }
+}
+add_action( 'wp_footer', 'add_css' ), 10 );
