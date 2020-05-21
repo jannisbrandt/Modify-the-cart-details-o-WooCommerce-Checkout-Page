@@ -11,7 +11,7 @@ License URI: 		http://www.gnu.org/licenses/gpl-2.0.html
 Fügt in der Tabelle auf der Checkout-Seite von WooCommerce die Funktionalität des Ändern der Anzahl der Produkte hinzu.
 == Description ==
 
-The customer cannot edit the quantity of the product or delete it. So I want to provide the functionality of changing the quantity and delete the product without having your customer leave the Checkout page.
+The *Statify widget* shows the most popular content from [Statify](http://wordpress.org/plugins/statify/) plugin made by pluginkollektiv. Fast and clear!
 
 = 1.0 =
 * Release of the first version
